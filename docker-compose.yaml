@@ -123,21 +123,21 @@ services:
   # ---------------------------
   # Model Serving API
   # ---------------------------
-  model_serving_518:
-    build: ./
-    container_name: dot_model_serving_518
-    depends_on:
-      - mlflow
-    entrypoint: >
-      mlflow models serve
-      -m models:/station_1000000518/latest
-      -p 8000
-      --host 0.0.0.0
-      --env-manager "local"
-    environment:
-      MLFLOW_TRACKING_URI: http://mlflow:5000
-    ports:
-      - "8000:8000"
+  # model_serving_518:
+  #   build: ./
+  #   container_name: dot_model_serving_518
+  #   depends_on:
+  #     - mlflow
+  #   entrypoint: >
+  #     mlflow models serve
+  #     -m models:/station_1000000518/latest
+  #     -p 8000
+  #     --host 0.0.0.0
+  #     --env-manager "local"
+  #   environment:
+  #     MLFLOW_TRACKING_URI: http://mlflow:5000
+  #   ports:
+  #     - "8000:8000"
 
   # ---------------------------
   # Model Serving API
@@ -150,13 +150,13 @@ services:
     entrypoint: >
       mlflow models serve
       -m models:/station_1000000471/latest
-      -p 8001
+      -p 7001
       --host 0.0.0.0
       --env-manager "local"
     environment:
       MLFLOW_TRACKING_URI: http://mlflow:5000
     ports:
-      - "8001:8001"
+      - "7001:7001"
 
      # ---------------------------
   # Model Serving API
@@ -169,13 +169,13 @@ services:
     entrypoint: >
       mlflow models serve
       -m models:/station_1000000523/latest
-      -p 8002
+      -p 7002
       --host 0.0.0.0
       --env-manager "local"
     environment:
       MLFLOW_TRACKING_URI: http://mlflow:5000
     ports:
-      - "8002:8002"
+      - "7002:7002"
 
 networks:
   default:
