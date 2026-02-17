@@ -18,7 +18,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy training code
-COPY train.py .
+COPY xgb_station.py .
 
 # Default command
-CMD ["python", "train.py"]
+CMD ["python", "xgb_station.py"]

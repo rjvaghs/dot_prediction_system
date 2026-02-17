@@ -17,7 +17,7 @@ with mlflow.start_run():
     # 1. LOAD RAW EVENT DATA
     # =====================================
 
-    df = pd.read_csv("data/swaminarayan_65_sales.csv")
+    df = pd.read_csv("swaminarayan_65_sales.csv")
 
     df["timestamp"] = pd.to_datetime(df["Time"])
     df = df.sort_values("timestamp").reset_index(drop=True)
