@@ -149,7 +149,7 @@ services:
       - mlflow
     entrypoint: >
       mlflow models serve
-      -m models:/station_1000000471/latest
+      -m models:/xgb_station_523/latest
       -p 7001
       --host 0.0.0.0
       --env-manager "local"
@@ -168,7 +168,7 @@ services:
       - mlflow
     entrypoint: >
       mlflow models serve
-      -m models:/station_1000000523/latest
+      -m models:/xgb_station_523/latest
       -p 7002
       --host 0.0.0.0
       --env-manager "local"
