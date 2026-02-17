@@ -1,0 +1,6 @@
+mlflow
+fastapi
+uvicorn
+pandas
+numpy
+psycopg2-binary
